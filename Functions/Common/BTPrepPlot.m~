@@ -9,9 +9,9 @@ function [X Y] = BTPrepPlot(BatchName,variable,varargin)
 %   [X Y] = BTPrepPlot(CorrelationFunction,NumberOfIterations,iteration)
 %
 %   variables
-%       mean, max, min
+%       {mean, max, min}
 %       iteration
-%       NLk,NLE,Lk,LE
+%       {NLk,NLE,Lk,LE}
 %       lambda
 %       time
 %
