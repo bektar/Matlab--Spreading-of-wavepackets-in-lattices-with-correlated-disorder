@@ -1,12 +1,12 @@
-function [Y X] = BTPrepPlot(BatchName,variable,varargin)
+function [X Y] = BTPrepPlot(BatchName,variable,varargin)
 %
 % Syntax:
-%	[Y X] = BTPrepPlot(BatchName,variable)
-%   [Y X] = BTPrepPlot(BatchName,variable,iteration)
-%   [Y X] = BTPrepPlot(BatchName,wave,iteration,time)
-%   [Y X] = BTPrepPlot(BatchName,'correlation',....)
-%   [Y X] = BTPrepPlot(CorrelationFunction,type,...)
-%   [Y X] = BTPrepPlot(CorrelationFunction,NumberOfIterations,iteration)
+%	[X Y] = BTPrepPlot(BatchName,variable)
+%   [X Y] = BTPrepPlot(BatchName,variable,iteration)
+%   [X Y] = BTPrepPlot(BatchName,wave,iteration,time)
+%   [X Y] = BTPrepPlot(BatchName,'correlation',....)
+%   [X Y] = BTPrepPlot(CorrelationFunction,type,...)
+%   [X Y] = BTPrepPlot(CorrelationFunction,NumberOfIterations,iteration)
 %
 
     function [ Norm ] = PrepareNorm( BatchName )
