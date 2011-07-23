@@ -9,9 +9,9 @@ function [X Y] = BTPrepPlot(BatchName,variable,varargin)
 %   [X Y] = BTPrepPlot(CorrelationFunction,NumberOfIterations,iteration)
 %
 %   variables
-%       {mean, max, min}
+%       mean, max, min
 %       iteration
-%       {NLk,NLE,Lk,LE}
+%       NLk,NLE,Lk,LE
 %       lambda
 %       time
 %
@@ -66,6 +66,8 @@ for ii = 1:(nargin-2)
             IterationToDisplay = varargin{ii+1};
         case 'NLk'
             type = 'NLk';
+            start = 0;
+            
         case 'NLE'
             type = 'NLE';
         case 'Lk'
@@ -122,7 +124,7 @@ switch variable
         data = zeros(NumberOfDataPoints,NumberOfIterations);
         for ii = 1:NumberOfIterations
             tmp = structure(ii).Potential;
-            [X data(:,ii)] = PrepareCorrelationFigure(tmp,type,'lambda',lambda);
+            [X data(:,ii)] = PrepareCorrelationFigure(tmp,type,'lambda',lambda,'start',start,'ending',ending);
         end
 end
 

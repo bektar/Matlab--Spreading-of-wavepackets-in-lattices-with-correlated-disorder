@@ -66,12 +66,20 @@ for ii = 1:(nargin-2)
             IterationToDisplay = varargin{ii+1};
         case 'NLk'
             type = 'NLk';
+            start = 0;
+            ending = pi;
         case 'NLE'
             type = 'NLE';
+            start = 0;
+            ending = 2;
         case 'Lk'
             type = 'Lk';
+            start = 0;
+            ending = pi;
         case 'LE'
             type = 'LE';
+            start = 0;
+            ending = pi;
         case 'lambda'
             lambda = varargin{ii+1};
         case 'time'
@@ -122,7 +130,7 @@ switch variable
         data = zeros(NumberOfDataPoints,NumberOfIterations);
         for ii = 1:NumberOfIterations
             tmp = structure(ii).Potential;
-            [X data(:,ii)] = PrepareCorrelationFigure(tmp,type,'lambda',lambda);
+            [X data(:,ii)] = PrepareCorrelationFigure(tmp,type,'lambda',lambda,'start',start,'ending',ending);
         end
 end
 
